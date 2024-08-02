@@ -2,9 +2,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
+import java.util.Queue;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class Main {
     // Tabela de massa dos aminoácidos
@@ -42,20 +43,20 @@ public class Main {
         String filePath = System.getProperty("user.dir") + "/" + fileName;
         System.out.println("Procurando o arquivo em: " + filePath);
 
-        Stack<Character> proteinStack = new Stack<>();
+        Queue<Character> proteinQueue = new LinkedList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String proteinSequence = br.readLine();
 
-            // Empilha os aminoácidos
+            // Enfileira os aminoácidos
             for (char aminoAcid : proteinSequence.toCharArray()) {
-                proteinStack.push(aminoAcid);
+                proteinQueue.add(aminoAcid);
             }
 
-            // Calcula a massa total da proteína desempilhando os aminoácidos
+            // Calcula a massa total da proteína desenfileirando os aminoácidos
             double totalMass = 0.0;
-            while (!proteinStack.isEmpty()) {
-                char aminoAcid = proteinStack.pop();
+            while (!proteinQueue.isEmpty()) {
+                char aminoAcid = proteinQueue.poll();
                 Double mass = AMINO_ACID_MASSES.get(aminoAcid);
                 if (mass != null) {
                     totalMass += mass;

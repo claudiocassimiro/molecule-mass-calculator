@@ -1,10 +1,10 @@
-# Protein Mass Calculator com Stack
+# Protein Mass Calculator com Queue
 
-Este projeto é uma aplicação em Java que calcula a massa total de uma proteína a partir de sua sequência de aminoácidos fornecida em um arquivo de texto, utilizando a estrutura de dados `Stack`. A sequência de aminoácidos é composta por caracteres que representam os diferentes aminoácidos, e suas massas são somadas para obter a massa total da proteína.
+Este projeto é uma aplicação em Java que calcula a massa total de uma proteína a partir de sua sequência de aminoácidos fornecida em um arquivo de texto, utilizando a estrutura de dados `Queue`. A sequência de aminoácidos é composta por caracteres que representam os diferentes aminoácidos, e suas massas são somadas para obter a massa total da proteína.
 
 ## Estrutura de Dados Utilizada
 
-Para armazenar a massa de cada aminoácido, utilizamos um `HashMap` em que a chave é o caractere que representa o aminoácido e o valor é a massa correspondente. Para processar a sequência de aminoácidos, usamos uma `Stack` para empilhar cada aminoácido lido do arquivo.
+Para armazenar a massa de cada aminoácido, utilizamos um `HashMap` em que a chave é o caractere que representa o aminoácido e o valor é a massa correspondente. Para processar a sequência de aminoácidos, usamos uma `Queue` para enfileirar cada aminoácido lido do arquivo.
 
 ## Tabela de Massas dos Aminoácidos
 
@@ -41,18 +41,18 @@ Para armazenar a massa de cada aminoácido, utilizamos um `HashMap` em que a cha
 ### Compilação e Execução
 
 1. Clone este repositório ou copie o código para um diretório local.
-2. Navegue até o diretório contendo o arquivo `ProteinMassStackCalculator.java`.
+2. Navegue até o diretório contendo o arquivo `ProteinMassQueueCalculator.java`.
 
 #### Compilação
 
 ```sh
-javac ProteinMassStackCalculator.java
+javac ProteinMassQueueCalculator.java
 ```
 
 #### Execução
 
 ```sh
-java ProteinMassStackCalculator
+java ProteinMassQueueCalculator
 ```
 
 3. Quando solicitado, insira o nome do arquivo contendo a sequência da proteína (por exemplo, `proteina1.txt`).
@@ -74,7 +74,7 @@ A massa total da proteína é: 821.39200
 
 ## Estrutura do Código
 
-- `ProteinMassStackCalculator.java`: Contém o código principal para ler a sequência de aminoácidos a partir de um arquivo, empilhar os aminoácidos usando uma `Stack`, calcular a massa total desempilhando os aminoácidos e exibir o resultado.
+- `ProteinMassQueueCalculator.java`: Contém o código principal para ler a sequência de aminoácidos a partir de um arquivo, enfileirar os aminoácidos usando uma `Queue`, calcular a massa total desenfileirando os aminoácidos e exibir o resultado.
 
 ## Tratamento de Erros
 
@@ -82,7 +82,9 @@ O programa verifica se o arquivo fornecido existe e pode ser lido. Se um aminoá
 
 ## Contribuições
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull
+
+request.
 
 ## Licença
 
